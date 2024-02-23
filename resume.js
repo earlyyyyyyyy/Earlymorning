@@ -5,7 +5,7 @@ const App = () => {
   const [currentSection, setCurrentSection] = useState('name');
 
   const resumeData = {
-    imageUrl: require('./myimage.jpg'),
+    imageUrl: require('./earl.jpg'),
     name: 'Earl Vincent Maratas',
     course: 'Bachelor of Science in Information Technology',
     education: {
@@ -14,7 +14,7 @@ const App = () => {
       highSchool: 'dalandanan national highschool',
       highSchoolYear: '2019',
       seniorHighSchool:'our lady of Fatima',
-     seniorHighSchool:Year:2021
+     seniorHighSchoolYear:'2021',
 
       college: 'Global Reciprocal Colleges ',
       collegeYear: '2025',
@@ -25,19 +25,14 @@ const App = () => {
    
     projects:
       {
-        projectName: 'Jarvy',
-        imageSrc: 'https://www.miyens.com/wp-content/uploads/2024/02/jarvy-300x300.png',
-        link: 'https://jarvy.ai',
-        description: 'Meet Jarvy, your AI sidekick to help you generate AI content like scripts, images, voiceover, code, transcript and more.',
+        projectName: 'r-valcapsandjerseycollectives',
+        imageSrc: '',
+        link: 'http://r-valcapsandjerseycollectives.zya.me/',
+        description: 'this project is a sales system also you can see here the revenue of the store  ',
       },
 
-      projects1:
-      {
-        projectName1: 'Juander',
-        imageSrc1: 'https://www.miyens.com/wp-content/uploads/2022/05/juander-by-miyens-300x300.png',
-        link1: 'https://juander.net',
-        description1: 'Juander is an eLearning authoring tool, LMS, and mobile app in one that lets you convert traditional training materials to digital format and deliver effective online lessons.',
-      },
+      
+      
 
     contact: {
       mobile: '099-153-27742', // Replace with your actual mobile phone number
@@ -127,9 +122,98 @@ const handlePress = () => {
   </View>
 )}
 
-{currentSection === 'projects1' && (
-  <View style={styles.projectsContainer}>
-     <Text style={styles.header1}>Projects:</Text>
-    <Text style={styles.projectTitle}>{resumeData.projects1.projectName1}</Text>
-    <Image source={{ uri: resumeData.projects1.imageSrc1 }} style={styles.projectImage} />
-    <Text style={styles.projectLink}>{resumeData.projects1.
+{currentSection === 'contact' && (
+            <View style={styles.contactContainer}>
+              <Text style={styles.header1}>Contact Me:{'\n'}</Text>
+              <Text style={styles.info1}>
+                {'\n'}Mobile: {resumeData.contact.mobile}
+                {'\n'}Email: {resumeData.contact.email}
+              </Text>
+            </View>
+          )}
+
+        </TouchableOpacity>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  contentContainer: {
+    alignItems: 'center',
+    maxWidth: 600,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    marginBottom: 20,
+  },
+  textContainer: {
+    alignSelf: 'stretch',
+  },
+  header: {
+    fontSize: 35,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    textAlign: 'center',
+  },
+  header1: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    textAlign: 'left',
+  },
+  info: {
+    fontSize: 20,
+    alignSelf: 'flex-start',
+    textAlign: 'center',
+  },
+  info1: {
+    fontSize: 20,
+    alignSelf: 'flex-start',
+    textAlign: 'left',
+
+  },
+  about: {
+    fontSize: 20,
+    textAlign: 'left',
+    alignSelf: 'flex-start',
+  },
+   projectsContainer: {
+    alignSelf: 'stretch',
+    marginTop: 20,
+  },
+  projectTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    textAlign: 'left',
+  },
+  projectImage: {
+    width: 300,
+    height: 300,
+    marginBottom: 10,
+    alignSelf: 'center',
+  },
+  projectLink: {
+    fontSize: 16,
+    marginBottom: 5,
+    textAlign: 'center',
+  },
+  projectDescription: {
+    fontSize: 16,
+    marginBottom: 10,
+    textAlign: 'justify',
+  },
+
+
+});
+
+export default App;
